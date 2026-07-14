@@ -48,6 +48,7 @@ h1,h2,h3{margin:0;line-height:1.26;text-wrap:balance}
 .krh{font-family:var(--myeong);font-weight:600;letter-spacing:-.005em}
 .mark{background:linear-gradient(180deg,transparent 58%,var(--gold-mark) 58%,var(--gold-mark) 92%,transparent 92%);
   padding:0 .08em}
+.nb{white-space:nowrap}
 
 /* specnote */
 .specnote{background:var(--ink);color:#E7DDCC;font-size:12.5px;line-height:1.5;
@@ -207,7 +208,12 @@ footer .fcopy{width:100%;border-top:1px solid #5B5040;margin-top:30px;padding-to
   padding:9px 4px 8px;font-size:11px;color:var(--ink-soft)}
 .quickbar a.qmain{background:var(--cta);color:#fff;font-weight:600}
 .quickbar a svg{width:20px;height:20px}
-@media(max-width:767px){ .quickbar{display:flex} body{padding-bottom:60px} }
+@media(max-width:767px){
+  .quickbar{display:flex} body{padding-bottom:60px}
+  .hero-scrim{background:linear-gradient(180deg,rgba(244,239,230,.86) 0%,rgba(244,239,230,.72) 58%,rgba(244,239,230,.60) 100%)}
+  .hero .lead{color:var(--ink);font-weight:600}
+  .hero-cta{justify-content:center}
+}
 
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:120;background:rgba(40,34,28,.86);
@@ -290,7 +296,7 @@ footer .fcopy{width:100%;border-top:1px solid #5B5040;margin-top:30px;padding-to
       <div class="about-txt rv">
         <p class="eyebrow">About</p>
         <h2><span class="en serif">About us</span><span class="krh">결이 고운 손끝을 위한 프라이빗 스튜디오</span></h2>
-        <p>네일어반은 한 분 한 분께 온전히 집중하는 1:1 프라이빗 예약제로 운영됩니다. 원하시는 무드를 맡겨주시면, 손 모양과 톤·일상에 어울리는 <span class="mark">오마카세 네일</span>로 섬세하게 완성해 드려요.</p>
+        <p>네일어반은 한 분 한 분께 온전히 집중하는 1:1 프라이빗 예약제로 운영됩니다. 원하시는 무드를 맡겨주시면, 손 모양과 톤·일상에 어울리는 <span class="mark nb">오마카세 네일</span>로 섬세하게 완성해 드려요.</p>
         <ul class="points">
           <li><span class="pn">01</span><span class="pt"><strong>1:1 프라이빗 예약제</strong><span>오롯이 당신에게 집중하는 편안한 시간</span></span></li>
           <li><span class="pn">02</span><span class="pt"><strong>지속력 있는 마감</strong><span>꼼꼼한 케어와 탄탄한 마감으로 오래 예쁘게</span></span></li>
@@ -346,9 +352,9 @@ footer .fcopy{width:100%;border-top:1px solid #5B5040;margin-top:30px;padding-to
       </div>
       <div class="res-grid">
         <div class="chan rv">
-          <a href="#reserve" aria-label="카카오톡 채널 (원장님 확인 후 링크 연결)">
+          <a href="https://pf.kakao.com/_SmIwG" target="_blank" rel="noopener" aria-label="카카오톡 채널 nail.urban">
             <span class="cico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="5" fill="#FEE500"/><path d="M12 6.4c-3.2 0-5.8 2-5.8 4.5 0 1.6 1.1 3 2.7 3.8l-.6 2.3 2.6-1.5c.4.05.7.07 1.1.07 3.2 0 5.8-2 5.8-4.6S15.2 6.4 12 6.4z" fill="#3B1E1E"/></svg></span>
-            <span class="cmeta"><strong>카카오톡 채널</strong><span>디자인 상담 · 링크 연결 예정</span></span>
+            <span class="cmeta"><strong>카카오톡 채널</strong><span>디자인 상담 · 예약 문의</span></span>
             <span class="carrow">→</span>
           </a>
           <a href="https://www.instagram.com/nail.urban_/" target="_blank" rel="noopener" aria-label="인스타그램 nail.urban">
@@ -413,7 +419,7 @@ footer .fcopy{width:100%;border-top:1px solid #5B5040;margin-top:30px;padding-to
       <a href="https://www.instagram.com/nail.urban_/" target="_blank" rel="noopener" aria-label="인스타그램">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="#D8CCBA" stroke-width="1.7"/><circle cx="12" cy="12" r="4.2" stroke="#D8CCBA" stroke-width="1.7"/><circle cx="17.2" cy="6.8" r="1.2" fill="#D8CCBA"/></svg>
       </a>
-      <a href="#reserve" aria-label="카카오톡 채널">
+      <a href="https://pf.kakao.com/_SmIwG" target="_blank" rel="noopener" aria-label="카카오톡 채널">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5.5c-3.6 0-6.5 2.3-6.5 5.1 0 1.8 1.2 3.4 3 4.3l-.7 2.6 2.9-1.7c.4.05.9.08 1.3.08 3.6 0 6.5-2.3 6.5-5.3S15.6 5.5 12 5.5z" stroke="#D8CCBA" stroke-width="1.6" stroke-linejoin="round"/></svg>
       </a>
     </div>
@@ -427,7 +433,7 @@ footer .fcopy{width:100%;border-top:1px solid #5B5040;margin-top:30px;padding-to
     <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>
     인스타
   </a>
-  <a href="#reserve">
+  <a href="https://pf.kakao.com/_SmIwG/chat" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="none"><path d="M12 5.5c-3.6 0-6.5 2.3-6.5 5.1 0 1.8 1.2 3.4 3 4.3l-.7 2.6 2.9-1.7c.4.05.9.08 1.3.08 3.6 0 6.5-2.3 6.5-5.3S15.6 5.5 12 5.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
     카톡
   </a>
