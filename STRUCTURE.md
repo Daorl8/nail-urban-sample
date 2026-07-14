@@ -5,7 +5,7 @@
 ```
 nail-urban-sample/
 ├─ index.html        # 배포 후보 = 그레이지/오트밀 브랜드톤 (인라인 CSS/JS 단일 파일)
-├─ index_green.html  # 변형 = 차분한 세이지 그린 (최신 index.html 복사 후 재색상, 미리보기 위해 현재 /index_green.html로 배포)
+│  (그린 변형은 별도 레포 nail-urban-green-sample로 이전됨)
 ├─ nu-hero.jpg       # 히어로 배경 (레이스·펄 젤네일)
 ├─ nu-about.jpg      # 소개 섹션 (핑크 보우 시그니처)
 ├─ nu-g1~g6.jpg      # 갤러리 6컷 (라이트박스)

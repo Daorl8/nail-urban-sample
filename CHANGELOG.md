@@ -1,5 +1,10 @@
 # CHANGELOG — nail-urban-sample (네일어반 무료 시안)
 
+## 2026-07-14 — 그린 변형 독립 레포로 분리 + 메인 정리 (10차)
+- 세이지 그린 버전을 **별도 레포 `nail-urban-green-sample`로 이전**(루트 index.html). 이유: 메인의 서브경로 /index_green.html이 캐시·경로 문제로 타인에게 빈 페이지로 보임 → 독립 사이트가 안전.
+- 메인 레포 정리: index_green.html 삭제, .assetsignore에 index_*.html 재추가(향후 변형 배포 방지). 메인은 그레이지 단일 버전으로 pristine 복귀.
+- A안(그레이지)=nail-urban-sample.lgt3232.workers.dev / B안(그린)=nail-urban-green-sample(CF 연결 후 .workers.dev).
+
 ## 2026-07-14 — 차분한 세이지 그린 변형 재생성 (9차)
 - index_green.html을 **최신 index.html 복사 후 재색상**으로 재생성(구글지도·마커·길찾기 등 모든 수정 상속). 변수명은 그대로 두고 값만 치환 → 다운스트림 CSS 무수정.
 - 초록 채도 다운(기존 그린안 #5EA96A/#3F945A 대비 세이지로): --gold(accent)#6F9A76 / --cta#4C7D5B(흰텍스트 4.78:1 통과) / --cta-dk#3F6A50. bg 그린틴트 #F3F6F1, ink #36473A. 히어로 마커=rgba(146,180,150,.40) 세이지 워시. 하드코딩 rgba(배경·그림자·오버레이·favicon·아이콘 SVG·시그니처카드 그라데이션)까지 전부 그린화.
