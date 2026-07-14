@@ -245,6 +245,29 @@ footer .fcopy{width:100%;border-top:1px solid #5B5040;margin-top:30px;padding-to
   .glink:hover::after{opacity:1}
   footer .fchan a:hover{border-color:var(--gold);color:#fff}
 }
+
+/* location map */
+.loc-map{border-radius:16px;overflow:hidden;border:1px solid var(--line-soft);background:var(--bg2);min-width:0}
+.loc-map iframe{width:100%;height:300px;border:0;display:block;filter:grayscale(.12)}
+.map-btn{display:block;text-align:center;padding:14px;background:var(--card);color:var(--cta);font-weight:600;font-size:14px;border-top:1px solid var(--line-soft);transition:.2s}
+/* price list */
+.pricelist{margin-top:24px;background:var(--card);border:1px solid var(--line-soft);border-radius:18px;padding:clamp(22px,3.2vw,32px)}
+.pl-title{font-size:18px;font-weight:800;margin:0 0 14px}
+.pl{list-style:none;margin:0;padding:0}
+.pl li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-bottom:1px solid var(--line-soft);min-width:0}
+.pl li:last-child{border-bottom:0}
+.pl li>span{font-size:15px;color:var(--ink);min-width:0}
+.pl li>span em{font-style:normal;color:var(--ink-faint);font-size:12.5px;margin-left:5px}
+.pl li>b{font-weight:700;font-size:15px;color:var(--cta);display:flex;flex-direction:column;align-items:flex-end;text-align:right;flex:0 0 auto}
+.pl li>b small{font-weight:500;font-size:12px;color:var(--ink-soft)}
+.pl-note{font-size:12.5px;color:var(--ink-soft);margin:16px 0 0;line-height:1.65}
+/* reserve note */
+.res-note{margin-top:clamp(28px,4vw,40px);background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+.res-note strong{display:block;font-size:13px;font-weight:800;color:var(--cta);margin-bottom:10px;letter-spacing:.03em}
+.res-note ul{margin:0;padding-left:18px}
+.res-note li{font-size:13.5px;color:var(--ink-soft);margin-bottom:6px}
+.res-note li b{color:var(--ink);font-weight:700}
+@media(hover:hover){ .map-btn:hover{background:var(--bg2)} }
 </style>
 </head>
 <body>
@@ -315,10 +338,25 @@ footer .fcopy{width:100%;border-top:1px solid #5B5040;margin-top:30px;padding-to
         <p>가격은 아트 난이도와 길이에 따라 달라져요. 정확한 견적은 편하게 문의해 주세요.</p>
       </div>
       <div class="menu-grid">
-        <a class="mcard sig rv" href="#reserve" aria-label="오마카세 네일 예약 문의"><span class="mtag">SIGNATURE</span><span class="mnum">01</span><h3>오마카세 네일</h3><p class="mdesc">원장님께 맡기는 맞춤 디자인 당신의 무드에 꼭 맞는 결로 완성</p><div class="mprice">가격 문의 →</div></a>
-        <a class="mcard rv" href="#reserve" aria-label="젤 네일 예약 문의"><span class="mnum">02</span><h3>젤 네일</h3><p class="mdesc">원컬러 · 프렌치 · 그라데이션 깔끔한 데일리 무드</p><div class="mprice">가격 문의 →</div></a>
-        <a class="mcard rv" href="#reserve" aria-label="아트 · 주얼 예약 문의"><span class="mnum">03</span><h3>아트 · 주얼</h3><p class="mdesc">레이스 · 플라워 · 큐빅 주얼 은은하게 반짝이는 포인트 아트</p><div class="mprice">가격 문의 →</div></a>
-        <a class="mcard rv" href="#reserve" aria-label="케어 · 연장 예약 문의"><span class="mnum">04</span><h3>케어 · 연장</h3><p class="mdesc">습식 케어 · 연장 · 보수 건강한 손톱 결을 위한 관리</p><div class="mprice">가격 문의 →</div></a>
+        <a class="mcard sig rv" href="#reserve" aria-label="오마카세 네일 예약 문의"><span class="mtag">SIGNATURE</span><span class="mnum">01</span><h3>오마카세 네일</h3><p class="mdesc">원장님께 맡기는 맞춤 디자인 당신의 무드에 꼭 맞는 결로 완성</p><div class="mprice">예약 문의 →</div></a>
+        <a class="mcard rv" href="#reserve" aria-label="젤 네일 예약 문의"><span class="mnum">02</span><h3>젤 네일</h3><p class="mdesc">원컬러 · 프렌치 · 그라데이션 깔끔한 데일리 무드</p><div class="mprice">예약 문의 →</div></a>
+        <a class="mcard rv" href="#reserve" aria-label="아트 · 주얼 예약 문의"><span class="mnum">03</span><h3>아트 · 주얼</h3><p class="mdesc">레이스 · 플라워 · 큐빅 주얼 은은하게 반짝이는 포인트 아트</p><div class="mprice">예약 문의 →</div></a>
+        <a class="mcard rv" href="#reserve" aria-label="케어 · 연장 예약 문의"><span class="mnum">04</span><h3>케어 · 연장</h3><p class="mdesc">습식 케어 · 연장 · 보수 건강한 손톱 결을 위한 관리</p><div class="mprice">예약 문의 →</div></a>
+      </div>
+      <div class="pricelist rv">
+        <h3 class="pl-title">가격 안내</h3>
+        <ul class="pl">
+          <li><span>원컬러 <em>기본·시럽·컬러</em></span><b>35,000원<small>자석 50,000원</small></b></li>
+          <li><span>프렌치</span><b>45,000원</b></li>
+          <li><span>그라데이션</span><b>40,000원</b></li>
+          <li><span>랩핑</span><b>5,000원</b></li>
+          <li><span>개당 연장</span><b>6,000원<small>아크릴젤 9,000 · 젤연장 8,000</small></b></li>
+          <li><span>전체 연장</span><b>60,000원<small>아크릴젤 90,000 · 젤연장 80,000</small></b></li>
+          <li><span>젤 제거</span><b>자샵 5,000원<small>타샵 10,000원</small></b></li>
+          <li><span>글리터·자석 추가</span><b>5,000~10,000원</b></li>
+          <li><span>아트</span><b>문의</b></li>
+        </ul>
+        <p class="pl-note">현금가 할인 기준이며, 기존 가격은 10%가 추가됩니다 · 타샵 젤제거만 단독으로는 받지 않아요(젤제거 후 아트 시) · 자세한 아트 가격은 문의해 주세요</p>
       </div>
     </div>
   </section>
@@ -371,7 +409,7 @@ footer .fcopy{width:100%;border-top:1px solid #5B5040;margin-top:30px;padding-to
             <div id="formWarn" class="form-warn"></div>
             <div class="field"><label for="fname">성함</label><input id="fname" type="text" placeholder="예약자 성함" autocomplete="name"></div>
             <div class="field"><label for="fcontact">연락처</label><input id="fcontact" type="text" placeholder="연락 가능한 번호 또는 인스타 아이디" autocomplete="tel"></div>
-            <div class="field"><label for="fmsg">원하는 디자인 · 날짜</label><textarea id="fmsg" placeholder="예) 다음 주 토요일 오후, 오마카세로 은은한 무드 부탁드려요"></textarea></div>
+            <div class="field"><label for="fmsg">원하는 디자인 · 날짜</label><textarea id="fmsg" placeholder="예) 날짜·시간 / 젤제거·연장 유무 / 원하는 시술·느낌 (오마카세 가능!)"></textarea></div>
             <label class="consent"><input id="fagree" type="checkbox"><span>예약 문의 응대를 위한 개인정보 수집·이용에 동의합니다.</span></label>
             <button type="submit" class="btn btn-primary">문의 보내기</button>
           </div>
@@ -381,6 +419,14 @@ footer .fcopy{width:100%;border-top:1px solid #5B5040;margin-top:30px;padding-to
             <p class="fsub">문의가 접수되었어요. 확인 후 빠르게 연락드릴게요 ✦</p>
           </div>
         </form>
+      </div>
+      <div class="res-note rv">
+        <strong>예약 안내</strong>
+        <ul>
+          <li>예약 변경·취소는 최소 <b>4일 전</b>까지 가능해요 (예약금 환불 불가)</li>
+          <li>10분 이상 지각 시 아트에 제한이 있을 수 있어요</li>
+          <li>20분 이상 지각 시 노쇼 처리되며, 예약금은 환불되지 않아요</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -394,14 +440,15 @@ footer .fcopy{width:100%;border-top:1px solid #5B5040;margin-top:30px;padding-to
       </div>
       <div class="loc-grid">
         <div class="loc-info rv">
-          <div class="loc-row"><span class="lk">주소</span><span class="lv">경기 수원시 팔달구 효원로 278</span></div>
+          <div class="loc-row"><span class="lk">주소</span><span class="lv">경기 수원시 팔달구 효원로 278<br>파비오더시타 278호</span></div>
+          <div class="loc-row"><span class="lk">찾아오기</span><span class="lv">뷰티라운지 앞 · 에스컬레이터 바로 앞</span></div>
           <div class="loc-row"><span class="lk">예약</span><span class="lv">1:1 프라이빗 예약제 · 방문 전 예약 필수</span></div>
-          <div class="loc-row"><span class="lk">영업시간</span><span class="lv">확정 후 안내 <em style="color:var(--ink-faint);font-style:normal">(예: 평일 11:00–20:00)</em></span></div>
-          <div class="loc-row"><span class="lk">주차</span><span class="lv">확정 후 안내</span></div>
+          <div class="loc-row"><span class="lk">영업시간</span><span class="lv">확정 후 안내 <em style="color:var(--ink-faint);font-style:normal">(원장님 확인 후 기입)</em></span></div>
+          <div class="loc-row"><span class="lk">주차</span><span class="lv">건물 지하 3층부터 주차 가능</span></div>
         </div>
-        <div class="map-ph rv">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.3 7-11a7 7 0 10-14 0c0 4.7 7 11 7 11z" stroke="#B7AB9B" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#B7AB9B" stroke-width="1.6"/></svg>
-          <span style="font-size:13px">지도 연동 예정</span>
+        <div class="loc-map rv">
+          <iframe title="네일어반 위치 지도" src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%20%EC%88%98%EC%9B%90%EC%8B%9C%20%ED%8C%94%EB%8B%AC%EA%B5%AC%20%ED%9A%A8%EC%9B%90%EB%A1%9C%20278&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a class="map-btn" href="https://place.map.kakao.com/1209043041" target="_blank" rel="noopener">카카오맵에서 길찾기 →</a>
         </div>
       </div>
     </div>
